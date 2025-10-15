@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!-- CodeMirror Core -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+
+        <!-- Addon CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.css">
+        <title>json viewer suite</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo">JSON VIEWER SUITE</div>
+            </header>
+
+            <main>
+                <h1 class="heading">JSON Formatter</h1>
+                <p class="subheading">Paste raw JSON on the left and click
+                    Convert to pretty-print it on the right.</p>
+
+                <div class="converter">
+                    <div class="raw-json-holder">
+                        <div class="name">Raw JSON</div>
+                        <div style="flex: 1; margin-top: 16px;">
+                            <textarea id="rawJson" spellcheck="false"
+                                placeholder="Paste JSON here..."></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="formatted-json-holder">
+                        <div class="name">Formatted JSON</div>
+                        <div id="formattedJson"></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <div class="footer-content">
+                    &copy; 2025 <a href="https://jsonviewersuite.com"
+                        target="_blank">jsonviewersuite.com</a>
+                </div>
+            </footer>
+
+        </div>
+        <!-- CodeMirror JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+        <!-- Modes -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+
+        <!-- Addons -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/selection/active-line.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldcode.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/brace-fold.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/comment-fold.min.js"></script>
+
+        <script type="module" src="./scripts.js"></script>
+    </body>
+</html>

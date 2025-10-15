@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.container {
+    background-color: #EAF6FF;
+    padding: 0px 36px;
+}
+
+header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+
+}
+
+header .logo {
+    font-size: 16px;
+    color: #0F172A;
+    font-weight: 600;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 32px;
+
+
+}
+
+.subheading {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 8px;
+    color: #6B7280;
+
+}
+
+.converter {
+    display: flex;
+    justify-content: flex-start;
+    padding: 48px 0px;
+    gap: 18px;
+
+}
+
+
+
+.raw-json-holder,
+.formatted-json-holder {
+    flex: 1;
+    background-color: white;
+    min-height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.raw-json-holder .name,
+.formatted-json-holder .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.raw-json-holder textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    white-space: nowrap;
+    padding: 10px;
+
+}
+
+#formattedJson {
+    flex: 1;
+    margin-top: 16px;
+    width: 100%;
+    border: 1px solid #0F172A;
+    max-width: calc(50vw - 85px);
+
+}
+
+@media (max-width: 940px) {
+
+
+    .converter {
+
+        flex-direction: column;
+
+    }
+
+
+    .container {
+        padding: 20px;
+    }
+
+    .formatted-json-holder #formattedJson {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .raw-json-holder textarea {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+footer {
+    background-color: #0F172A;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 14px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #38BDF8;
+    /* light blue link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
